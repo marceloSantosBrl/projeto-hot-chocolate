@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Models;
 
-public class Context: DbContext
+public class UserContext: DbContext
 {
     private readonly IConfiguration _configuration;
     public DbSet<Comments> Comments { get; set; } = null!;
@@ -10,12 +10,12 @@ public class Context: DbContext
     public DbSet<Posts> Posts { get; set; } = null!;
     public DbSet<Users> Users { get; set; } = null!;
 
-    public Context()
+    public UserContext()
     {
         
     }
 
-    public Context(IConfiguration configuration)
+    public UserContext(IConfiguration configuration)
     {
         _configuration = configuration ?? 
                          throw new ArgumentNullException(nameof(configuration));
