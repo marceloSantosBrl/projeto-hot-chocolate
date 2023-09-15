@@ -18,5 +18,4 @@ public interface IUserService
     public Task<User> GetCommentAuthor(Comment comment);
     public Task<ICollection<Comment>> GetUserComments(User user);
     public Task<ICollection<Post>> GetUserPosts(User user);
-
 }
