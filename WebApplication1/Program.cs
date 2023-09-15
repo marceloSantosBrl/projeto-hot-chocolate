@@ -17,7 +17,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<QueryType>()
-    .RegisterService<UserService>();
+    .RegisterDbContext<UserContext>()
+    .RegisterService<IUserService>();
 
 var app = builder.Build();
 
